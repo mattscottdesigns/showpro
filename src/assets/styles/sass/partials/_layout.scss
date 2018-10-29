@@ -1,0 +1,264 @@
+.bolt {
+    display: flex;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    background: url(./../images/bright-grey.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 15px;
+}
+
+.view {
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+#page {
+    display: flex;
+    font-family: sans-serif !important;
+    line-height: 18px;
+    font-size: 14px;
+    min-height: 100vh;
+}
+
+.bolt-sidenav,
+.bolt-content {
+    position: relative;
+}
+
+.bolt-sidenav {
+    background: rgba(35, 46, 57, 0.95);
+    width: 275px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.bolt-content {
+    background: #fff;
+    flex-grow: 1;
+    overflow: hidden;
+    margin-left: 275px;
+}
+
+.page-header,
+.page-footer {
+    height: 60px;
+    background: #e6e6e6;
+}
+
+.page-header {
+    z-index: 200;
+    top: 0;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.page-body {
+    min-height: 100%;
+}
+
+.page-body>.content {
+    margin: 0 auto;
+    padding: 50px 75px;
+    min-height: 100%;
+}
+
+.page-footer {
+    bottom: 0;
+    display: none;
+}
+
+.sidenav-header {
+    color: #fff;
+    background: #004fa0;
+    border-bottom: 1px solid #00366b;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 35px;
+}
+
+.sidenav-body {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.sidenav-header .sidenav-status {
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    right: 0;
+    background: #636c75;
+    border-radius: 16px;
+    color: #fff;
+    padding: 4px 18px;
+    max-width: 106px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 auto;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+ul.sidenav-menu,
+ul.sidenav-submenu {
+    color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.sidenav-submenu {
+    display: none;
+    background: #38424d;
+}
+
+ul.sidenav-submenu.toggle {
+    display: block;
+}
+
+ul.sidenav-menu>li>a,
+ul.sidenav-submenu>li>a {
+    font-size: 14px;
+    transition: all ease-in .3s;
+}
+
+ul.sidenav-menu>li>a {
+    display: block;
+    padding: 20px 15px;
+    line-height: 120%;
+    color: inherit;
+    text-decoration: none;
+    background: transparent;
+}
+
+.sidenav-menu-icon {
+    color: #fff;
+    width: 30px;
+    margin-right: 15px;
+    text-align: center;
+    font-size: 18px;
+    opacity: .5;
+}
+
+ul.sidenav-submenu>li.active>a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+ul.sidenav-menu>li.active>a {
+    background: #008080;
+}
+
+ul.sidenav-menu>li.active .sidenav-menu-icon {
+    opacity: 1;
+}
+
+ul.sidenav-menu>li.active .sidenav-status-icon {
+    opacity: 0;
+}
+
+.sidenav-status-icon {
+    position: absolute;
+    right: 25px;
+    font-size: 13px;
+    margin-top: 3px;
+    opacity: 1;
+    transition: opacity .3s;
+    display: none;
+}
+
+.sidenav-header-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidenav-header-code,
+.sidenav-header-user {
+    opacity: .66;
+    font-size: 15px;
+}
+
+ul.page-header-links>li {
+    align-self: center;
+    padding: 20px;
+    border-left: 1px solid rgba(0, 0, 0, .15);
+    font-size: 14px;
+    color: #6c757d;
+    overflow: hidden;
+}
+
+ul.page-header-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    min-width: 300px;
+    transition: all .3s;
+    opacity: 1;
+}
+
+.sidenav-toggle {
+    padding: 13px 20px;
+    cursor: pointer;
+    transition: all .3s;
+    display: none;
+}
+
+ul.sidenav-submenu>li>a {
+    padding: 14px 30px;
+    display: block;
+    text-decoration: none;
+    padding-left: 60px;
+    font-size: 14px;
+    color: #fff;
+    border-left: 5px solid rgba(255, 255, 255, .1);
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+@media(max-width: 992px) {
+    .bolt-sidenav,
+    .bolt-content {
+        margin: 0;
+        transition: all .3s;
+    }
+
+    .bolt-sidenav {
+        margin-left: -275px;
+        z-index: 200;
+        background: rgba(35,46,57,1);
+    }
+    .sidenav-toggle{
+        display: block;
+    }
+    .page-body>.content {
+        padding: 50px 30px;
+    }
+    .bolt.mobile-active .bolt-sidenav {
+        margin-left: 0;
+        box-shadow: 0px 0px 100px rgba(0, 0, 0, .2);
+    }
+    .bolt.mobile-active .sidenav-toggle{
+        display: block;
+        margin-left: 275px !important;
+        position: fixed;    
+        border: 0;
+        z-index: 10;
+    }
+    .bolt.mobile-active ul.page-header-links {
+        opacity: 0;
+    }
+}

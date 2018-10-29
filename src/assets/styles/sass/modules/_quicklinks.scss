@@ -1,0 +1,40 @@
+.quick-links {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    background: #eee;
+    color: #ececec;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid #ccc;
+    z-index: 300;
+}
+
+.quick-links-logo {
+    position: absolute;
+    right: 0;
+    padding: 2px;
+}
+
+.quick-links-logo,
+.quick-links-logo>img {
+    height: 100%
+}
+
+.quick-links-item {
+    text-align: center;
+    padding: 15px;
+    color: #3c3c3c;
+    border-right: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.quick-links-item:hover {
+    background: #ddd;
+}
+
+.content> :not(.taskbar):not(.quick-links) {
+    max-width: 992px;
+}

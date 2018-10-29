@@ -1,0 +1,55 @@
+.bolt-modal-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(25, 25, 25, 0.75);
+    z-index: 200;
+    padding: 50px;
+    overflow: auto;
+}
+
+.bolt-modal {
+    background: #fff;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bolt-modal .bolt-modal-content {
+    padding: 40px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.bolt-modal .bolt-modal-header,
+.bolt-modal .bolt-modal-footer {
+    background: #eee;
+    position: relative;
+}
+
+.bolt-modal .bolt-modal-header {
+    font-size: 24px;
+    margin: 0;
+    padding: 20px;
+}
+
+.bolt-modal .bolt-modal-footer {
+    padding: 10px 15px;
+    text-align: right;
+}
+
+.bolt-modal-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+}
